@@ -284,26 +284,6 @@
   outline: none;
 }
 
-
-.contour {
-  fill: var(--contour-color);
-  transition-duration: 0.6s;
-}
-
-.main-body {
-  fill: var(--heart-main-body-color);
-  transition: fill 0.3s 0.05s ease-in-out;
-}
-
-.core {
-  fill: var(--core-color);
-  transition: fill 0.3s 0.03s ease-in-out;
-}
-
-.sparks {
-  opacity: 0;
-}
-
 .card__icon-button:hover {
   --core-color: #000;
   --heart-main-body-color: #000;
@@ -318,12 +298,10 @@
 
 .like-icon.is-liked  {
   animation: scale 0.3s ease-in 0.1s 1;
+  --sparks-animation: lights 0.3s ease-in 0.3s 1;
   --core-color: #F00;
   --heart-main-body-color: #F00;
-}
-
-.like-icon.is-liked .sparks{
-  animation: lights 0.3s ease-in 0.3s 1;
+  --contour-animation: lights 0.3s 0.06s ease-in;
 }
 
 @keyframes scale {
@@ -339,11 +317,13 @@
 
 @keyframes lights {
   from {
-    opacity: 1;
+    --sparks-opacity: 1;
+    --countour-color: red;
   }
 
   to {
-    opacity: 0;
+    --sparks-opacity: 0;
+    --countour-color: black;
   }
 }
 

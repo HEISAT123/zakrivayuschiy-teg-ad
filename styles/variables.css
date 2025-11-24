@@ -8,4 +8,6 @@
     --core-color: white;
     --heart-main-body-color: white;
     --sparks-opacity: 0;
+    --sparks-animation: none;
+    --contour-animation: none;
 }
