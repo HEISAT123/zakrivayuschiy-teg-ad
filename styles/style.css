@@ -84,7 +84,8 @@ body:has(dialog[open]) {
 }
 
 .card__title {
-  font-weight: 700;
+  font-variation-settings: 
+    'wght' 700;
   font-style: Bold;
   font-size: 19px;
   line-height: 100%;
